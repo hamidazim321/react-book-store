@@ -5,25 +5,25 @@ import '../styles/BookList.css';
 export default function BookList() {
   const [Books, setBooks] = useState([
     {
-      title: 'TITLE 1',
-      category: 'ACTION',
-      author: 'AUTHOR 1',
+      title: 'The Hunger Games',
+      category: 'Action',
+      author: 'Suzanne Collins',
       progress: 64,
-      chapter: '17',
+      state: 'Chapter: 17',
     },
     {
-      title: 'TITLE 2',
-      category: 'ACTION',
-      author: 'AUTHOR 1',
-      progress: 64,
-      chapter: '17',
+      title: 'Dune',
+      category: 'Science Fiction',
+      author: 'Frank Herbert',
+      progress: 8,
+      state: 'Chapter: 3: "A Lesson Learned" ',
     },
     {
       title: 'TITLE 3',
       category: 'ACTION',
       author: 'AUTHOR 1',
       progress: 64,
-      chapter: '17',
+      state: 'Introduction',
     },
   ]);
 

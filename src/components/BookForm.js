@@ -22,8 +22,8 @@ export default function BookForm() {
         <select className="select-category">
           <option className="select-placeholder">Category</option>
           <option>Action</option>
-          <option>Fiction</option>
-          <option>Auto Biography</option>
+          <option>Science Fiction</option>
+          <option>Economy</option>
         </select>
         <button className="submit-form" type="submit">
           Add Book

@@ -3,7 +3,7 @@ import '../styles/BookCard.css';
 
 export default function BookCard({ BookObject, removeBook }) {
   const {
-    title, category, author, progress, chapter,
+    title, category, author, progress, state,
   } = BookObject;
   return (
     <>
@@ -30,8 +30,7 @@ export default function BookCard({ BookObject, removeBook }) {
       <div className="book-status">
         <p className="current-chapter">Current Chapter</p>
         <p className="chapter-number">
-          Chapter
-          {chapter}
+          {state}
         </p>
         <button type="button" className="update-progess-btn">Update Progress</button>
       </div>
@@ -45,7 +44,7 @@ BookCard.propTypes = {
     category: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
     progress: PropTypes.number.isRequired,
-    chapter: PropTypes.string.isRequired,
+    state: PropTypes.string.isRequired,
   }).isRequired,
   removeBook: PropTypes.func.isRequired,
 };
