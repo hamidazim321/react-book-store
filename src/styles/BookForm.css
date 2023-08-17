@@ -13,9 +13,10 @@
   color: var(--black-two);
   opacity: 0.2;
 }
+
 .heading {
-  font-family: Montserrat;
-  font-size: 1.7rem;
+  font-family: sans-serif;
+  font-size: 1.3rem;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -41,31 +42,10 @@ button {
 .select-category {
   border: solid 1px rgb(230, 230, 230);
   border-radius: 5px;
-  
-}
-
-.input-title:focus,
-.select-category:focus {
-  outline: solid 1px rgb(167, 167, 250);
-}
-
-.input-title::placeholder {
-  color: #c4c4c4;
-  font-family: Montserrat;
-  font-size: 1rem;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.15px;
 }
 
 .input-title {
   width: 50%;
-}
-
-.select-placeholder {
-  display: none;
 }
 
 .select-category {
@@ -78,6 +58,26 @@ button {
   line-height: normal;
   letter-spacing: -0.15px;
   color: #5e5d5d;
+}
+
+.input-title:focus,
+.select-category:focus {
+  outline: solid 1px rgb(167, 167, 250);
+}
+
+.input-title::placeholder {
+  color: #c4c4c4;
+  font-family: sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+}
+
+.select-placeholder {
+  display: none;
 }
 
 .submit-form {

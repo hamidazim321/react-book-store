@@ -16,7 +16,7 @@ export default function BookForm() {
   return (
     <div className="add-book">
       <span className="hr-line" />
-      <p className="heading">Add New Book</p>
+      <p className="heading">ADD NEW BOOK</p>
       <form onSubmit={(e) => { handleSubmit(e); }}>
         <input className="input-title" placeholder="Book title" value={inputValue} onChange={(e) => { handleChange(e); }} />
         <select className="select-category">
