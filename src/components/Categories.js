@@ -1,5 +1,9 @@
+import '../styles/Categories.css';
+
 export default function Categories() {
   return (
-    <h1>Under Construction</h1>
+    <div className="categories">
+      <h1>Under Construction</h1>
+    </div>
   );
 }
