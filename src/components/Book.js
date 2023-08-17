@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import '../styles/BookCard.css';
 
-export default function BookCard({ BookObject }) {
+export default function BookCard({ BookObject, removeBook }) {
   const {
     title, category, author, progress, chapter,
   } = BookObject;
@@ -13,7 +13,7 @@ export default function BookCard({ BookObject }) {
         <p className="book-author">{author}</p>
         <div className="book-btns">
           <button type="button" className="book-btn border-right">Comments</button>
-          <button type="button" className="book-btn border-right">Remove</button>
+          <button type="button" className="book-btn border-right" onClick={() => { removeBook(BookObject); }}>Remove</button>
           <button type="button" className="book-btn">Edit</button>
         </div>
       </div>
@@ -47,4 +47,5 @@ BookCard.propTypes = {
     progress: PropTypes.number.isRequired,
     chapter: PropTypes.string.isRequired,
   }).isRequired,
+  removeBook: PropTypes.func.isRequired,
 };

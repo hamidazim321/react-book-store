@@ -3,7 +3,7 @@ import BookCard from './Book';
 import '../styles/BookList.css';
 
 export default function BookList() {
-  const [Books] = useState([
+  const [Books, setBooks] = useState([
     {
       title: 'TITLE 1',
       category: 'ACTION',
@@ -26,12 +26,17 @@ export default function BookList() {
       chapter: '17',
     },
   ]);
+
+  const removeBook = (obj) => {
+    setBooks(Books.filter((book) => book !== obj));
+  };
+
   return (
     <ul className="book-list">
       {
       Books.map((book) => (
         <li key={book.title} className="book-card">
-          <BookCard BookObject={book} />
+          <BookCard BookObject={book} removeBook={removeBook} />
         </li>
       ))
       }
