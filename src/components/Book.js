@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import '../styles/BookCard.css';
 
 export default function BookCard({ BookObject }) {
   const {
@@ -10,12 +11,14 @@ export default function BookCard({ BookObject }) {
         <p className="book-category">{category}</p>
         <p className="book-title">{title}</p>
         <p className="book-author">{author}</p>
-        <button type="button" className="book-btn">Comments</button>
-        <button type="button" className="book-btn">Remove</button>
-        <button type="button" className="book-btn">Edit</button>
+        <div className="book-btns">
+          <button type="button" className="book-btn border-right">Comments</button>
+          <button type="button" className="book-btn border-right">Remove</button>
+          <button type="button" className="book-btn">Edit</button>
+        </div>
       </div>
       <div className="book-progress">
-        <div className="progress-graph" />
+        <span className="progress-graph" />
         <div className="progress-state">
           <p className="progress-percentage">
             {progress}
@@ -25,7 +28,7 @@ export default function BookCard({ BookObject }) {
         </div>
       </div>
       <div className="book-status">
-        <p className="current-chapter" />
+        <p className="current-chapter">Current Chapter</p>
         <p className="chapter-number">
           Chapter
           {chapter}
