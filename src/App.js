@@ -5,7 +5,7 @@ function App() {
     title: 'TITLE 1',
     category: 'ACTION',
     author: 'AUTHOR 1',
-    progress: '64',
+    progress: 64,
     chapter: '17',
   };
   return (

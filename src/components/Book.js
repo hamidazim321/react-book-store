@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 export default function BookCard({ BookObject }) {
   const {
     title, category, author, progress, chapter,
@@ -33,3 +35,13 @@ export default function BookCard({ BookObject }) {
     </div>
   );
 }
+
+BookCard.propTypes = {
+  BookObject: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+    progress: PropTypes.number.isRequired,
+    chapter: PropTypes.string.isRequired,
+  }).isRequired,
+};
