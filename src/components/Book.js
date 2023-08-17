@@ -6,7 +6,7 @@ export default function BookCard({ BookObject }) {
     title, category, author, progress, chapter,
   } = BookObject;
   return (
-    <div className="book-card">
+    <>
       <div className="book-description">
         <p className="book-category">{category}</p>
         <p className="book-title">{title}</p>
@@ -35,7 +35,7 @@ export default function BookCard({ BookObject }) {
         </p>
         <button type="button" className="update-progess-btn">Update Progress</button>
       </div>
-    </div>
+    </>
   );
 }
 
