@@ -1,0 +1,55 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  padding: 1.5rem 3rem;
+  border-bottom: solid 1px rgb(240, 240, 240);
+}
+
+.brand-name p {
+  font-size: 2rem;
+  font-family: fantasy;
+  color: #0290ff;
+}
+
+.navlist {
+  display: flex;
+  list-style-type: none;
+  font-size: 1rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  gap: 1rem;
+}
+
+.navlist a {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.dark {
+  color: black;
+}
+
+.grey {
+  color: rgb(184, 184, 184);
+}
+
+.profile-btn {
+  background: none;
+  border: solid 1px rgb(184, 184, 184);
+  border-radius: 50%;
+  padding: 0.5rem;
+  margin-left: auto;
+}
+
+.profile-btn:hover {
+  cursor: pointer;
+}
+
+.profile-btn img {
+  width: 20px;
+}
