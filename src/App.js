@@ -1,6 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import BookForm from './components/BookForm';
-import BookList from './components/BookList';
+import Books from './components/Books';
 import Categories from './components/Categories';
 import './App.css';
 import Navbar from './components/Navbar';
@@ -12,12 +11,7 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={(
-            <>
-              <BookList />
-              <BookForm />
-            </>
-        )}
+          element={<Books />}
         />
         <Route path="/categories" element={<Categories />} />
       </Routes>
