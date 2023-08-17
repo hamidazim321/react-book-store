@@ -3,7 +3,7 @@ import BookCard from './Book';
 import '../styles/BookList.css';
 
 export default function BookList() {
-  const [Books, setBooks] = useState([
+  const [Books] = useState([
     {
       title: 'TITLE 1',
       category: 'ACTION',

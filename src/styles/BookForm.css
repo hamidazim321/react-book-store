@@ -1,0 +1,14 @@
+.add-book {
+  width: 100%;
+  border: solid;
+}
+.heading {
+  font-family: Montserrat;
+  font-size: 1.7rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+}
