@@ -1,4 +1,10 @@
 .App {
-  padding: 4rem;
-  background-color: rgb(245, 245, 245);
+  padding: 3rem;
+  background-color: rgb(240, 237, 237);
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding:0;
 }

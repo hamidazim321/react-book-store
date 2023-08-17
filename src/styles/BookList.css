@@ -3,11 +3,13 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 0;
+  padding: 3rem;
+  background-color: rgb(250, 250, 250);
+  margin: 0;
 }
 .book-card {
   display: flex;
-  border: solid 1px rgb(168, 168, 168);
+  border: solid 1px rgb(230, 230, 230);
   border-radius: 5px;
   width: 100%;
   padding: 2rem 6rem 2rem 2rem;

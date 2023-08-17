@@ -15,15 +15,17 @@ export default function BookForm() {
 
   return (
     <div className="add-book">
+      <span className="hr-line" />
       <p className="heading">Add New Book</p>
       <form onSubmit={(e) => { handleSubmit(e); }}>
-        <input placeholder="Book title" value={inputValue} onChange={(e) => { handleChange(e); }} />
-        <select>
+        <input className="input-title" placeholder="Book title" value={inputValue} onChange={(e) => { handleChange(e); }} />
+        <select className="select-category">
+          <option className="select-placeholder">Category</option>
           <option>Action</option>
-          <option>Action</option>
-          <option>Action</option>
+          <option>Fiction</option>
+          <option>Auto Biography</option>
         </select>
-        <button type="submit">
+        <button className="submit-form" type="submit">
           Add Book
         </button>
       </form>

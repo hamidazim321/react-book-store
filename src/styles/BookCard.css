@@ -138,7 +138,7 @@ p {
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.4px;
-  color: var(--black-two);
+  color: black
 }
 .update-progess-btn{
   padding: 0.5rem 1rem;
