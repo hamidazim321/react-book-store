@@ -1,29 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  books: [
-    {
-      title: 'The Hunger Games',
-      category: 'Action',
-      author: 'Suzanne Collins',
-      progress: 64,
-      state: 'Chapter 17',
-    },
-    {
-      title: 'Dune',
-      category: 'Science Fiction',
-      author: 'Frank Herbert',
-      progress: 8,
-      state: 'Chapter 3: "A Lesson Learned" ',
-    },
-    {
-      title: 'Capital in the Twenty-First Century',
-      category: 'Economy',
-      author: 'Suzanne Collins',
-      progress: 0,
-      state: 'Introduction',
-    },
-  ],
+  books: [],
 };
 
 const booksSlice = createSlice({
