@@ -22,7 +22,9 @@ export default function BookForm() {
     const obj = {
       category,
       title: inputValue,
-      id: uuidv4(),
+      item_id: uuidv4(),
+      progress: 0,
+      state: 'Chapter 1',
     };
     dispatch(addBook(obj));
     setInputValue('');
