@@ -1,9 +1,17 @@
+import { useDispatch, useSelector } from 'react-redux';
+import { setStatus } from '../redux/categories/categories';
 import '../styles/Categories.css';
 
 export default function Categories() {
+  const { categoryList } = useSelector((state) => state.categories);
+  const dispatch = useDispatch();
+  if (Array.isArray(categoryList) && categoryList.length < 1) {
+    dispatch(setStatus('Under construction'));
+  }
+  console.log(categoryList);
   return (
     <div className="categories">
-      <h1>Under Construction</h1>
+      <h1>{categoryList}</h1>
     </div>
   );
 }
