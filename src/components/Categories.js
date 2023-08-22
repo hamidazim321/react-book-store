@@ -8,7 +8,6 @@ export default function Categories() {
   if (Array.isArray(categoryList) && categoryList.length < 1) {
     dispatch(setStatus('Under construction'));
   }
-  console.log(categoryList);
   return (
     <div className="categories">
       <h1>{categoryList}</h1>
