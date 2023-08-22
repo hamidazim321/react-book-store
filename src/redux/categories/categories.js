@@ -9,8 +9,13 @@ const categoriesSlice = createSlice({
   initialState,
   reducers: {
     setStatus: (state, { payload }) => {
-      /* eslint-disable no-param-reassign */
-      state.categoryList = payload === 'Under construction' ? 'Under construction' : state.categoryList;
+      if (payload === 'Under construction') {
+        return {
+          ...state,
+          categoryList: 'Under construction',
+        };
+      }
+      return state;
     },
   },
 });
