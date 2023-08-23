@@ -1,10 +1,19 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 import BookCard from './BookCard';
 import '../styles/BookList.css';
+import { fetchBooks } from '../redux/books/books';
 
 export default function BookList() {
   const { books } = useSelector((state) => state.books);
-  if (books.length < 1) {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    // dispatch(fetchBooks());
+    // console.log(books);
+    dispatch(fetchBooks());
+  }, [dispatch]);
+
+  if (Array.isArray(books) && books.length < 1) {
     return (
       <div className="books-list-empty">
         <p>Your Books List is empty</p>
