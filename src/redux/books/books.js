@@ -28,10 +28,9 @@ export const postBook = async (bookObj) => {
 };
 
 export const deleteBook = async (id) => {
-    const req = await axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${API_ID}/books/${id}`);
-    return req;
-  };
-
+  const req = await axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${API_ID}/books/${id}`);
+  return req;
+};
 
 const initialState = {
   books: [],
