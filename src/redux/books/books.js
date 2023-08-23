@@ -22,15 +22,21 @@ export const fetchBooks = createAsyncThunk(
   },
 );
 
-export const postBook = async (bookObj) => {
-  const req = await axios.post(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${API_ID}/books`, bookObj);
-  return req;
-};
+export const postBook = createAsyncThunk(
+  'books/postBook',
+  async (bookObj) => {
+    const req = await axios.post(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${API_ID}/books`, bookObj);
+    return req;
+  },
+);
 
-export const deleteBook = async (id) => {
-  const req = await axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${API_ID}/books/${id}`);
-  return req;
-};
+export const deleteBook = createAsyncThunk(
+  'books/deleteBook',
+  async (id) => {
+    const req = await axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${API_ID}/books/${id}`);
+    return req;
+  },
+);
 
 const initialState = {
   books: [
@@ -66,10 +72,10 @@ const booksSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(fetchBooks.fulfilled, (state, { payload }) => {
-      /* eslint-disable no-param-reassign */
-      state.books = payload;
-    });
+    builder.addCase(fetchBooks.fulfilled, (state, { payload }) => ({
+      ...state,
+      books: payload,
+    }));
   },
 });
 

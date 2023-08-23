@@ -8,8 +8,6 @@ export default function BookList() {
   const { books } = useSelector((state) => state.books);
   const dispatch = useDispatch();
   useEffect(() => {
-    // dispatch(fetchBooks());
-    // console.log(books);
     dispatch(fetchBooks());
   }, [dispatch]);
 
