@@ -4,7 +4,7 @@ import '../styles/BookCard.css';
 
 export default function BookCard({ BookObject }) {
   const {
-    title, category, author, progress, state,
+    title, category, author,
   } = BookObject;
   // const dispatch = useDispatch();
   return (
@@ -23,7 +23,7 @@ export default function BookCard({ BookObject }) {
         <span className="progress-graph" />
         <div className="progress-state">
           <p className="progress-percentage">
-            {progress}
+            {0}
             %
           </p>
           <p className="progress-completed">completed</p>
@@ -32,7 +32,7 @@ export default function BookCard({ BookObject }) {
       <div className="book-status">
         <p className="current-chapter">Current Chapter</p>
         <p className="chapter-number">
-          {state}
+          Chapter 1
         </p>
         <button type="button" className="update-progess-btn">Update Progress</button>
       </div>
@@ -45,7 +45,5 @@ BookCard.propTypes = {
     title: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
-    progress: PropTypes.number.isRequired,
-    state: PropTypes.string.isRequired,
   }).isRequired,
 };

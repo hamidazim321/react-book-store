@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-export const API_ID = 'NWinrxHHZnIgCGnkQUgD';
+export const API_ID = 'FVZlJvMt6nVeDc72v9Yr';
 
 export const fetchBooks = createAsyncThunk(
   'books/fetchBooks',
@@ -22,49 +22,19 @@ export const fetchBooks = createAsyncThunk(
   },
 );
 
-export const postBook = createAsyncThunk(
-  'books/postBook',
-  async (bookObj) => {
-    const req = await axios.post(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${API_ID}/books`, bookObj);
-    return req;
-  },
-);
+export const postBook = async (bookObj) => {
+  const req = await axios.post(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${API_ID}/books`, bookObj);
+  return req;
+};
 
-export const deleteBook = createAsyncThunk(
-  'books/deleteBook',
-  async (id) => {
+export const deleteBook = async (id) => {
     const req = await axios.delete(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${API_ID}/books/${id}`);
     return req;
-  },
-);
+  };
+
 
 const initialState = {
-  books: [
-    {
-      item_id: 'item1',
-      title: 'The Great Gatsby',
-      author: 'John Smith',
-      category: 'Fiction',
-      progress: 0,
-      state: 'Chapter 1',
-    },
-    {
-      item_id: 'item2',
-      title: 'Anna Karenina',
-      author: 'Leo Tolstoy',
-      category: 'Fiction',
-      progress: 0,
-      state: 'Chapter 1',
-    },
-    {
-      item_id: 'item3',
-      title: 'The Selfish Gene',
-      author: 'Richard Dawkins',
-      category: 'Nonfiction',
-      progress: 0,
-      state: 'Chapter 1',
-    },
-  ],
+  books: [],
 };
 
 const booksSlice = createSlice({

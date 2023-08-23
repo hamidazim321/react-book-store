@@ -22,7 +22,7 @@ export default function BookList() {
     <ul className="book-list">
       {
       books.map((book) => (
-        <li key={book.title} className="book-card">
+        <li key={book.item_id} className="book-card">
           <BookCard BookObject={book} />
         </li>
       ))
