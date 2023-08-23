@@ -1,5 +1,33 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+const API_ID = 'NWinrxHHZnIgCGnkQUgD';
+
+export const fetchBooks = async () => {
+  const req = await fetch(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${API_ID}/books`);
+  const resp = await req.json();
+  return resp;
+};
+
+export const postBook = async (bookObj) => {
+  const req = await fetch(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${API_ID}/books`, {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+    },
+    body: JSON.stringify(bookObj),
+  });
+  const resp = await req.json();
+  return resp;
+};
+
+export const deleteBook = async (id) => {
+  const req = await fetch(`https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/${API_ID}/books/${id}`, {
+    method: 'DELETE',
+  });
+  const resp = await req.json;
+  return resp;
+};
+
 const initialState = {
   books: [
     {
