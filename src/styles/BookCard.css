@@ -15,7 +15,7 @@ p {
 
 .book-category {
   opacity: 0.5;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 1rem;
   font-weight: bold;
   font-stretch: normal;
@@ -27,7 +27,7 @@ p {
 }
 
 .book-title {
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, sans-serif;
   font-size: 1.4rem;
   font-weight: bold;
   font-stretch: normal;
@@ -39,14 +39,14 @@ p {
 }
 
 .book-author {
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: blue;
+  color: rgb(92, 92, 255);
   margin-bottom: 2rem;
 }
 
@@ -55,14 +55,14 @@ p {
 }
 
 .book-btn {
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, sans-serif;
   font-size: 0.875rem;
   font-weight: 300;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: blue;
+  color: rgb(92, 92, 255);
   border: none;
   background: none;
   padding: 0;
@@ -130,7 +130,7 @@ p {
 }
 
 .current-chapter {
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, sans-serif;
   font-size: 1rem;
   font-weight: 300;
   font-stretch: normal;
@@ -142,7 +142,7 @@ p {
 }
 
 .chapter-number {
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, sans-serif;
   font-size: 1rem;
   font-weight: 300;
   font-stretch: normal;
@@ -153,7 +153,7 @@ p {
 }
 
 .update-progess-btn {
-  font-family: RobotoSlab;
+  font-family: RobotoSlab, sans-serif;
   padding: 0.5rem 1rem;
   border-radius: 3px;
   background-color: #0290ff;
