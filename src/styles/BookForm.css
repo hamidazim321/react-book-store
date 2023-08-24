@@ -15,7 +15,7 @@
 }
 
 .heading {
-  font-family: sans-serif;
+  font-family: Montserrat;
   font-size: 1.4rem;
   font-weight: bold;
   font-stretch: normal;
@@ -36,12 +36,14 @@ form {
 .select-category,
 button {
   padding: 0.8rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: Montserrat;
   font-size: 1rem;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
+  letter-spacing: -0.15px;
+  color: var(--very-light-pink);
 }
 
 .input-title,
@@ -92,6 +94,13 @@ button {
   color: white;
   border: none;
   border-radius: 5px;
+  font-family: RobotoSlab;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: white;
 }

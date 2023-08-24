@@ -8,8 +8,13 @@
 }
 
 .brand-name p {
-  font-size: 2rem;
-  font-family: fantasy;
+  font-family: Montserrat;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
   color: #0290ff;
 }
 
