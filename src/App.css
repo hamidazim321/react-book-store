@@ -16,6 +16,12 @@
   font-weight: 300;
 }
 
+@font-face {
+  font-family: RobotoSlab;
+  src: url('../src/styles/fonts/Roboto_Slab/static/RobotoSlab-Bold.ttf');
+  font-weight: bold;
+}
+
 .App {
   padding: 3rem;
   background-color: rgb(240, 237, 237);
