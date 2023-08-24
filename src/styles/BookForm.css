@@ -16,7 +16,7 @@
 
 .heading {
   font-family: sans-serif;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
@@ -36,6 +36,12 @@ form {
 .select-category,
 button {
   padding: 0.8rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
 }
 
 .input-title,
