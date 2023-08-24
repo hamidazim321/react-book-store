@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 
 import '../styles/Navbar.css';
-import user from '../assets/icons8-user-30.png';
+import user from '../assets/UserIcon.png';
 
 export default function Navbar() {
   return (
