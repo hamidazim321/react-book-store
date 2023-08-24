@@ -1,13 +1,21 @@
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { removeBook } from '../redux/books/books';
+import { deleteBook, fetchBooks } from '../redux/books/books';
 import '../styles/BookCard.css';
 
 export default function BookCard({ BookObject }) {
+  /* eslint-disable camelcase */
   const {
-    title, category, author, progress, state,
+    title, category, author, item_id,
   } = BookObject;
+
   const dispatch = useDispatch();
+
+  const removeBook = async () => {
+    /* eslint-disable camelcase */
+    await deleteBook(item_id);
+    await dispatch(fetchBooks());
+  };
   return (
     <>
       <div className="book-description">
@@ -16,7 +24,16 @@ export default function BookCard({ BookObject }) {
         <p className="book-author">{author}</p>
         <div className="book-btns">
           <button type="button" className="book-btn border-right">Comments</button>
-          <button type="button" className="book-btn border-right" onClick={() => dispatch(removeBook(BookObject))}>Remove</button>
+          <button
+            type="button"
+            className="book-btn border-right"
+            onClick={() => {
+              /* eslint-disable camelcase */
+              removeBook();
+            }}
+          >
+            Remove
+          </button>
           <button type="button" className="book-btn">Edit</button>
         </div>
       </div>
@@ -24,7 +41,7 @@ export default function BookCard({ BookObject }) {
         <span className="progress-graph" />
         <div className="progress-state">
           <p className="progress-percentage">
-            {progress}
+            {0}
             %
           </p>
           <p className="progress-completed">completed</p>
@@ -33,7 +50,7 @@ export default function BookCard({ BookObject }) {
       <div className="book-status">
         <p className="current-chapter">Current Chapter</p>
         <p className="chapter-number">
-          {state}
+          Chapter 1
         </p>
         <button type="button" className="update-progess-btn">Update Progress</button>
       </div>
@@ -46,7 +63,6 @@ BookCard.propTypes = {
     title: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
-    progress: PropTypes.number.isRequired,
-    state: PropTypes.string.isRequired,
+    item_id: PropTypes.string.isRequired,
   }).isRequired,
 };

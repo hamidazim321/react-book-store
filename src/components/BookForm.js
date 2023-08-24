@@ -1,12 +1,12 @@
 import { v4 as uuidv4 } from 'uuid';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/books';
+import { postBook, fetchBooks } from '../redux/books/books';
 import '../styles/BookForm.css';
 
 export default function BookForm() {
   const [inputValue, setInputValue] = useState('');
-  const [category, setCategory] = useState();
+  const [category, setCategory] = useState(null);
   const dispatch = useDispatch();
 
   const handleInput = (event) => {
@@ -17,7 +17,7 @@ export default function BookForm() {
     setCategory(event.target.value);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const obj = {
       category,
@@ -25,16 +25,17 @@ export default function BookForm() {
       item_id: uuidv4(),
       progress: 0,
       state: 'Chapter 1',
+      author: 'Suzan Colins',
     };
-    dispatch(addBook(obj));
-    setInputValue('');
+    await postBook(obj);
+    await dispatch(fetchBooks());
   };
 
   return (
     <div className="add-book">
       <span className="hr-line" />
       <p className="heading">ADD NEW BOOK</p>
-      <form onSubmit={(e) => { handleSubmit(e); }}>
+      <form onSubmit={(e) => handleSubmit(e)}>
         <input className="input-title" placeholder="Book title" value={inputValue} onChange={(e) => { handleInput(e); }} />
         <select className="select-category" onChange={(e) => handleSelect(e)}>
           <option className="select-placeholder">Category</option>
